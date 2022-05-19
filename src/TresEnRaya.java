@@ -68,6 +68,10 @@ public class TresEnRaya {
 		return jugada;
 		
 	}
+	/**
+	 * getter del atributo tablero 
+	 * @return objeto tablero
+	 */
 	char[][] getTablero(){
         return this.tablero;
     }
@@ -156,17 +160,34 @@ public class TresEnRaya {
  * @param valor		Propiedad de la ficha: (X) Jugador 1, (O) Jugador 2
  * @author lone
  */
+	
+	/**
+	 * Marcar celda actualiza con la jugada del jugador
+	 * @param fila elegida para la jugada
+	 * @param columna columna elegida para la jugada
+	 * @param valor ficha del jugador
+	 */
 	void marcarCelda(int fila, int columna,char valor) {
 		
 		tablero[fila][columna]= valor;
 		
 	}
-
+	/**
+	 * bla bla bla
+	 * @param fila fila del tablero que se comprueba
+	 * @param columna columana del tablero que se comprueba
+	 * @return true si la celda esta libre, false el caso contrario
+	 */
 
 	boolean posicionLibre(int fila,int columna){
     
     if (tablero[fila][columna]=='-') return true; else return false;
     }
+	/**
+	 * Devuelve las liebres de la partida
+	 * @return numero de huecos
+	 */
+
 
 int huecosLibres(){
     int hl=0;    
